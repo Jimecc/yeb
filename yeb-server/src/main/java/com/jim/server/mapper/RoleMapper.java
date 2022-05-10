@@ -2,6 +2,7 @@ package com.jim.server.mapper;
 
 import com.jim.server.pojo.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.mapstruct.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author jim
  * @since 2022-05-09
  */
+@Mapper
 public interface RoleMapper extends BaseMapper<Role> {
 
 }
