@@ -7,33 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Init Submit">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AdminRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AdminRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AppraiseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AppraiseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/DepartmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeEcMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeEcMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeRemoveMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeRemoveMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeTrainMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeTrainMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/JoblevelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/JoblevelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MailLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MailLogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MenuRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MenuRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/NationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/NationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/OplogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/OplogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/PoliticsStatusMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/PoliticsStatusMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/PositionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/PositionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SalaryAdjustMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SalaryAdjustMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SalaryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SalaryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SysMsgContentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SysMsgContentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SysMsgMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/SysMsgMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/AdminServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Init Submit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +137,7 @@
       <workItem from="1652096254373" duration="1493000" />
       <workItem from="1652097788770" duration="437000" />
       <workItem from="1652098267975" duration="2741000" />
-      <workItem from="1652146123475" duration="669000" />
+      <workItem from="1652146123475" duration="997000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -193,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652088645961</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Init Submit">
+      <created>1652148368117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652148368117</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
