@@ -12,61 +12,29 @@ import java.util.Map;
 
 @Component
 public class JwtTokenUtil {
+    private static final String CLAIM_KEY_USERNAME="sub";
+    private static final String CLAIM_KEY_CREATED="created";
 
-    private static final String CLAIM_KEY_USERNAME = "sub";
-    private static final String CLAIM_KEY_CREATED  = "created";
-
-    // 秘钥
     @Value("${jwt.secret}")
     private String secret;
-    // 失效时间
-    @Value("${jwt.expiration}")
+    @Value("${jet.expiration}")
     private Long expiration;
 
-
-    /**
-     * 根据用户信息获取 Token
-     * @param userdetails
+    /**\
+     * 根据用户信息，生成 token
+     * @param userDetails
      * @return
      */
-    public String generateToken(UserDetails userdetails){
+    public String generateToken(UserDetails userDetails){
         Map<String,Object> claims = new HashMap<>();
-        claims.put(CLAIM_KEY_USERNAME,userdetails.getUsername());
-        claims.put(CLAIM_KEY_CREATED,userdetails.getUsername());
+        claims.put(CLAIM_KEY_USERNAME,userDetails.getUsername());
+        claims.put(CLAIM_KEY_CREATED,new Date());
         return generateToken(claims);
     }
 
 
     /**
-     * 从 Token 中获取用户名
-     * @param token
-     * @return
-     */
-    public String getUserNameFromToken(String token){
-        String username;
-        try {
-            Claims claims = getClaimsFormToken(token);
-            username = claims.getSubject();
-        } catch (Exception e) {
-            username = null;
-        }
-
-        return username;
-    }
-
-
-
-    /**
-     * 判断是否可以被刷新（如果过期了就可以进行刷新，否则不行）
-     * @param token
-     * @return
-     */
-    public boolean canRefresh(String token){
-        return !isTokenExpired(token);
-    }
-
-    /**
-     * 从
+     * 判断 TOKEN 是否有效
      * @param token
      * @param userDetails
      * @return
@@ -77,21 +45,64 @@ public class JwtTokenUtil {
     }
 
     /**
-     * 刷新 Token
+     * 判断 token 是否失效
      * @param token
      * @return
      */
-    public String refreshToken(String token){
-        Claims claims = getClaimsFormToken(token);
-        claims.put(CLAIM_KEY_CREATED,new Date());
-        return generateToken(claims);
+    private boolean isTokenExpired(String token) {
+        Date expireDate = getExpiredDateFromToken(token);
+        return expireDate.before(new Date());
+    }
+
+    /**
+     * 从 token 中获取失效时间
+     * @param token
+     * @return
+     */
+    private Date getExpiredDateFromToken(String token) {
+        Claims claims = getClaimsFromToken(token);
+        return claims.getExpiration();
+    }
+
+    /**
+     * 根据何在生成 JWT TOKEN
+     * @param claims
+     * @return
+     */
+    private String generateToken(Map<String,Object> claims){
+        return Jwts.builder()
+                .setClaims(claims)
+                // 将Long 类型转换成
+                .setExpiration(generateExpirationDate())
+                .signWith(SignatureAlgorithm.ES512,secret)
+                .compact();
+
 
     }
 
     /**
-     * 从 Token 中获取荷载
+     * 从 token 中获取用户名
+     * @param token
+     * @return
      */
-    private Claims getClaimsFormToken(String token){
+    public String getUserNameFromToken(String token){
+        String username;
+        try {
+            Claims claims = getClaimsFromToken(token);
+            username = claims.getSubject();
+        } catch (Exception e) {
+           username = null;
+        }
+        return username;
+    }
+
+    /**
+     * 从 token 中获取荷载
+     * @param token
+     * @return
+     */
+
+    private Claims getClaimsFromToken(String token) {
         Claims claims = null;
         try {
             claims = Jwts.parser()
@@ -99,48 +110,16 @@ public class JwtTokenUtil {
                     .parseClaimsJws(token)
                     .getBody();
         } catch (Exception e) {
-            e.printStackTrace();
+           e.printStackTrace();
         }
-
         return claims;
     }
 
-
-
     /**
-     * 判断 Token 是否失效
-     * @param token
+     * 生成 TOKEN 失效时间
      * @return
      */
-    private boolean isTokenExpired(String token) {
-        Date expireDate = getExpiredDateFromToken(token);
-        return expireDate.before(new Date());
-
-    }
-
-
-
-
-
-    private Date getExpiredDateFromToken(String token) {
-        Claims claims = getClaimsFormToken(token);
-        return claims.getExpiration();
-    }
-
-    /**
-     * 根据荷载生成 Token
-     * @param claims
-     * @return
-     */
-    private String generateToken(Map<String,Object> claims){
-        return Jwts.builder()
-                .setClaims(claims)
-                .setExpiration(generateExpirationDate())
-                .signWith(SignatureAlgorithm.ES512,secret)
-                .compact();
-    }
-
-    private Date generateExpirationDate(){
+    private Date generateExpirationDate() {
         return new Date(System.currentTimeMillis()+expiration*1000);
     }
 
