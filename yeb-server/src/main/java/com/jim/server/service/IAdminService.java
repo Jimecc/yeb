@@ -2,9 +2,11 @@ package com.jim.server.service;
 
 import com.jim.server.pojo.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.jim.server.pojo.Menu;
 import com.jim.server.pojo.RespBean;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * <p>
@@ -29,4 +31,5 @@ public interface IAdminService extends IService<Admin> {
      * @Params: 
      */
     Admin getAdminByUsername(String username);
+
 }

@@ -2,6 +2,9 @@ package com.jim.server.mapper;
 
 import com.jim.server.pojo.Admin;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jim.server.pojo.Menu;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface AdminMapper extends BaseMapper<Admin> {
 
+    List<Menu> getMenusByAdminId(Integer id);
 }

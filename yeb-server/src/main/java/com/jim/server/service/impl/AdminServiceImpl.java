@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jim.server.config.security.JwtTokenUtil;
 import com.jim.server.pojo.Admin;
 import com.jim.server.mapper.AdminMapper;
+import com.jim.server.pojo.Menu;
 import com.jim.server.pojo.RespBean;
 import com.jim.server.service.IAdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -82,4 +84,6 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         // 使用 MyBatis-Plus 查找一个用户，要求：username=传进来的用户名，且 enable=true（未被封禁）
         return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username",username).eq("enabled",true));
     }
+
+
 }

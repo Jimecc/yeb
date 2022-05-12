@@ -7,14 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Login Success">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/CaptchaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/CaptchaController.java" afterDir="false" />
+    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Captcha">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/AdminLoginParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/AdminLoginParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IMenuService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +154,7 @@
       <workItem from="1652183248744" duration="387000" />
       <workItem from="1652183663654" duration="668000" />
       <workItem from="1652256488720" duration="12621000" />
-      <workItem from="1652321496761" duration="16083000" />
+      <workItem from="1652321496761" duration="21047000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -237,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652347000002</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Captcha">
+      <created>1652357138888</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652357138888</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +273,7 @@
     <MESSAGE value="Init Commit" />
     <MESSAGE value="Init Submit" />
     <MESSAGE value="Login Success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Success" />
+    <MESSAGE value="Captcha" />
+    <option name="LAST_COMMIT_MESSAGE" value="Captcha" />
   </component>
 </project>
