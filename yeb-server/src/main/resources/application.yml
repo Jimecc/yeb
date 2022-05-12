@@ -12,7 +12,7 @@ spring:
     timeout: 10000ms
     host: localhost
     port: 6379
-    database: 0 # 选择哪个库，默认0库
+    database: 0 # 选择哪个默认0库
     lettuce:
       pool:
         max-active: 1024 # 最大连接数，默认 8

@@ -1,11 +1,14 @@
 package com.jim.server.service.impl;
 
+import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.jim.server.pojo.Admin;
 import com.jim.server.pojo.Menu;
 import com.jim.server.mapper.MenuMapper;
 import com.jim.server.service.IMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +29,8 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
     @Autowired
     private MenuMapper menuMapper;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
     /**
      * @Author: Jim
      * @Description: 根据用户id 查询菜单列表
@@ -33,6 +38,14 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
      */
     @Override
     public List<Menu> getMenuByAdminId() {
-        return menuMapper.getMenusByAdminId(((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId());
+        Integer adminId = ((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId();
+        ValueOperations<String,Object> valueOperations = redisTemplate.opsForValue();
+        List<Menu> menus = (List<Menu>) valueOperations.get("menu_"+adminId);
+        if(CollectionUtils.isEmpty(menus)){
+            menus = menuMapper.getMenusByAdminId(adminId);
+            valueOperations.set("menu_"+adminId,menus);
+        }
+
+        return menus;
     }
 }
