@@ -7,20 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Init Submit">
+    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Login Success">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/CaptchaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/CaptchaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/Swagger2Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/security/JwtAuthencationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/security/JwtAuthencationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/security/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/config/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/AdminLoginParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/AdminLoginParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IAdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/Swagger2Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/Swagger2Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/JwtAuthencationTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/JwtAuthencationTokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/JwtTokenUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/AdminServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +151,7 @@
       <workItem from="1652183248744" duration="387000" />
       <workItem from="1652183663654" duration="668000" />
       <workItem from="1652256488720" duration="12621000" />
-      <workItem from="1652321496761" duration="9694000" />
+      <workItem from="1652321496761" duration="16083000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -236,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652329131430</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Login Success">
+      <created>1652347000002</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652347000002</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +262,7 @@
     </ignored-roots>
     <MESSAGE value="Init Commit" />
     <MESSAGE value="Init Submit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Submit" />
+    <MESSAGE value="Login Success" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Success" />
   </component>
 </project>

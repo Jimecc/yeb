@@ -21,7 +21,7 @@ public interface IAdminService extends IService<Admin> {
      * @Description: 登陆之后返回 token
      * @Params: 
      */
-    RespBean login(String username, String password, HttpServletRequest request);
+    RespBean login(String username, String password, String code, HttpServletRequest request);
 
     /**
      * @Author: Jim
