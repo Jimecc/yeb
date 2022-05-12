@@ -1,7 +1,19 @@
 # 云E办 (yeb)
 -----
-<font size=2>此项目是来自 Bilibili 的前后端分离式项目（后端部分），目前正在根据课程编写代码</font>
+此项目来自Bilibili
 ![示例图](https://files.catbox.moe/vme765.png)
+
+### 主要技术栈
+- Springboot
+- Redis
+- Jwt
+- Security
+- MyBatis-Plus
+- Axios
+
+- Vue
+- css
+
 
 <br>
 <br>
