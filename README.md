@@ -17,7 +17,7 @@
 <br>
 
 
-# 其他<font color=pink>注意事项</font>
+# 其他<font color="#ffaabb">注意事项</font>
 Maven 中的`fastdts`无法自动下载，具体解决方法可参考：https://blog.csdn.net/Baiguoguo/article/details/121022718
 
 
