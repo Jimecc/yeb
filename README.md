@@ -12,8 +12,12 @@
 主要修改内容包含：
 - 各类密码（主要为MySQL 数据库、Redis 等）
 - 如果您的 MySQL 版本为 5.7 （或更早），请删除数据库驱动中的`.cj`
+ 
+<br>
+<br>
+
 
 # 其他<font color=pink>注意事项</font>
-Maven 中的`fastdts`无法自动下载，具体更新方法如下：https://blog.csdn.net/Baiguoguo/article/details/121022718
+Maven 中的`fastdts`无法自动下载，具体解决方法可参考：https://blog.csdn.net/Baiguoguo/article/details/121022718
 
 
