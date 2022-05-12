@@ -1,6 +1,6 @@
 # 云E办 (yeb)
 -----
-此项目来自Bilibili
+此项目来自Bilibili，视频地址：https://www.bilibili.com/video/BV1ff4y1M7XK?p=1
 ![示例图](https://files.catbox.moe/vme765.png)
 
 ### 主要技术栈
