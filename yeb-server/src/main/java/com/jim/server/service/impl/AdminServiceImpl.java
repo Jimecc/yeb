@@ -75,6 +75,6 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Override
     public Admin getAdminByUsername(String username) {
         // 使用 MyBatis-Plus 查找一个用户，要求：username=传进来的用户名，且 enable=true（未被封禁）
-        return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username",username).eq("enable",true));
+        return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username",username).eq("enabled",true));
     }
 }
