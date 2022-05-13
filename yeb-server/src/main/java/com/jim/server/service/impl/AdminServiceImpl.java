@@ -3,10 +3,12 @@ package com.jim.server.service.impl;
 import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jim.server.config.security.JwtTokenUtil;
+import com.jim.server.mapper.RoleMapper;
 import com.jim.server.pojo.Admin;
 import com.jim.server.mapper.AdminMapper;
 import com.jim.server.pojo.Menu;
 import com.jim.server.pojo.RespBean;
+import com.jim.server.pojo.Role;
 import com.jim.server.service.IAdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +51,8 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private JwtTokenUtil jwtTokenUtil;
     @Autowired
     private AdminMapper adminMapper;
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Value("${jwt.tokenHead}")
     private String tokenHead;
@@ -79,10 +83,25 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
 //        return null;
     }
 
+    /**
+     * @Author: Jim
+     * @Description: 根据用户名获取用户
+     * @Params: 
+     */
     @Override
     public Admin getAdminByUsername(String username) {
         // 使用 MyBatis-Plus 查找一个用户，要求：username=传进来的用户名，且 enable=true（未被封禁）
         return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username",username).eq("enabled",true));
+    }
+
+    /**
+     * @Author: Jim
+     * @Description: 根据用户 id 查询角色列表
+     * @Params:
+     */
+    @Override
+    public List<Role> getRoles(Integer adminId) {
+        return roleMapper.getRoles(adminId);
     }
 
 

@@ -14,4 +14,12 @@
         id, name, nameZh
     </sql>
 
+    <select id="getRoles" resultType="com.jim.server.pojo.Role">
+        select
+               r.id,
+               r.`name`,
+               r.nameZh
+        from t_role r,t_admin_role ar
+        where r.id = ar.rid and ar.adminId = #{adminId};
+    </select>
 </mapper>
