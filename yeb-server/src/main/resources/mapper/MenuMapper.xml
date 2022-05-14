@@ -37,6 +37,19 @@
             <result column="rnameZh" property="nameZh" />
         </collection>
     </resultMap>
+
+    <resultMap id="MenusWithChildren" type="com.jim.server.pojo.Menu" extends="BaseResultMap">
+        <id column="id1" property="id" />
+        <result column="name1" property="name" />
+        <collection property="children" ofType="com.jim.server.pojo.Menu">
+            <id column="id2" property="id" />
+            <result column="name2" property="name" />
+            <collection property="children" ofType="com.jim.server.pojo.Menu">
+                <id column="id3" property="id" />
+                <result column="name3" property="name" />
+            </collection>
+        </collection>
+    </resultMap>
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, url, path, component, name, iconCls, keepAlive, requireAuth, parentId, enabled
@@ -91,5 +104,25 @@
             r.id = mr.rid
         ORDER BY m.id
 
+    </select>
+
+    <select id="getAllMenus" resultMap="MenusWithChildren">
+        select
+            m1.id as id1,
+            m1.name as name1,
+            m2.id as id2,
+            m2.name as name2,
+            m3.id as id3,
+            m3.name as name3
+        from
+            t_menu m1,
+            t_menu m2,
+            t_menu m3
+        where
+            m1.id = m2.parentId
+          and m2.id = m3.parentId
+          and m3.enabled = true
+        order by
+            m1.id,m2.id,m3.id
     </select>
 </mapper>

@@ -28,4 +28,11 @@ public interface IMenuService extends IService<Menu> {
      * @Params: 
      */
     List<Menu> getMenusWithRole();
+
+    /**
+     * @Author: Jim
+     * @Description: 查询所有菜单
+     * @Params: 
+     */
+    List<Menu> getAllMenus();
 }

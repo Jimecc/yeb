@@ -13,4 +13,10 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface MenuRoleMapper extends BaseMapper<MenuRole> {
 
+    /**
+     * @Author: Jim
+     * @Description: 批量更新
+     * @Params:
+     */
+    Integer insertRecord(Integer rid, Integer[] mids);
 }
