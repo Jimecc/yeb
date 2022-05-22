@@ -2,6 +2,7 @@ package com.jim.server.service;
 
 import com.jim.server.pojo.Department;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.jim.server.pojo.RespBean;
 
 import java.util.List;
 
@@ -21,4 +22,18 @@ public interface IDepartmentService extends IService<Department> {
      * @Params: 
      */
     List<Department> getAllDepartments();
+
+    /**
+     * @Author: Jim
+     * @Description: 添加部门
+     * @Params: 
+     */
+    RespBean addDep(Department department);
+
+    /**
+     * @Author: Jim
+     * @Description: 删除部门
+     * @Params: 
+     */
+    RespBean delDep(Integer id);
 }

@@ -7,25 +7,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Permiss Submit">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/banner2.txt" afterDir="false" />
+    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Department 数据库查询语句">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/DepartmentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/DepartmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IDepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IDepartmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/DepartmentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/banner2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/AdminMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/DepartmentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/DepartmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/DepartmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/MenuRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/MenuRoleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Department.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IDepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IDepartmentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/DepartmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/mapper/AdminMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/mapper/DepartmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/MenuRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/mapper/MenuRoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +179,19 @@
       <workItem from="1652447744380" duration="150000" />
       <workItem from="1652447909495" duration="595000" />
       <workItem from="1652451077818" duration="8374000" />
-      <workItem from="1652517292063" duration="3393000" />
+      <workItem from="1652517292063" duration="9660000" />
+      <workItem from="1652581426071" duration="222000" />
+      <workItem from="1652581657406" duration="1651000" />
+      <workItem from="1652586411024" duration="3046000" />
+      <workItem from="1652605729250" duration="1800000" />
+      <workItem from="1652613503998" duration="604000" />
+      <workItem from="1652690442316" duration="598000" />
+      <workItem from="1652699848242" duration="597000" />
+      <workItem from="1652708009282" duration="32000" />
+      <workItem from="1652759223784" duration="3465000" />
+      <workItem from="1652776328216" duration="2125000" />
+      <workItem from="1653101615697" duration="1825000" />
+      <workItem from="1653207157907" duration="776000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -351,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652492775615</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Banner Submit">
+      <created>1652527721921</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1652527721921</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +404,8 @@
     <MESSAGE value="Joblevel Submit" />
     <MESSAGE value="Role Submit" />
     <MESSAGE value="Permiss Submit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Permiss Submit" />
+    <MESSAGE value="Banner Submit" />
+    <MESSAGE value="Department 数据库查询语句" />
+    <option name="LAST_COMMIT_MESSAGE" value="Department 数据库查询语句" />
   </component>
 </project>
