@@ -1,8 +1,7 @@
 package com.jim.server.mapper;
 
-import com.jim.server.pojo.Department;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.jim.server.pojo.RespBean;
+import com.jim.server.pojo.Department;
 
 import java.util.List;
 
@@ -28,7 +27,7 @@ public interface DepartmentMapper extends BaseMapper<Department> {
      * @Description: 添加部门
      * @Params: 
      */
-    RespBean addDep(Department dep);
+    void addDep(Department dep);
 
-    RespBean delDep(Department dep);
+    void delDep(Department dep);
 }
