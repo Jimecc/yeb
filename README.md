@@ -4,15 +4,21 @@
 ![示例图](https://files.catbox.moe/vme765.png)
 
 ### 主要技术栈
+#### 后端技术栈
 - Springboot
 - Redis
 - Jwt
 - Security
 - MyBatis-Plus
-- Axios
+- 数据库存储过程
 
+
+<br>
+
+#### 前端技术栈
 - Vue
 - css
+- Axios
 
 
 <br>
