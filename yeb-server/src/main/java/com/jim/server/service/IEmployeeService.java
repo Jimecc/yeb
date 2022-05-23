@@ -1,11 +1,12 @@
 package com.jim.server.service;
 
-import com.jim.server.pojo.Employee;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.jim.server.pojo.Employee;
 import com.jim.server.pojo.RespBean;
 import com.jim.server.pojo.RespPageBean;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -36,4 +37,11 @@ public interface IEmployeeService extends IService<Employee> {
      * @param employee
      */
     RespBean addEmp(Employee employee);
+
+    /**
+     * @Author: Jim
+     * @Description: 查询员工
+     * @param id
+     */
+    List<Employee> getEmployee(Integer id);
 }
