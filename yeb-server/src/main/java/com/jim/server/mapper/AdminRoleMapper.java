@@ -1,7 +1,7 @@
 package com.jim.server.mapper;
 
-import com.jim.server.pojo.AdminRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jim.server.pojo.AdminRole;
 
 /**
  * <p>
@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface AdminRoleMapper extends BaseMapper<AdminRole> {
 
+    Integer addAdminRole(Integer adminId, Integer[] rids);
 }

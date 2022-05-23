@@ -1,8 +1,7 @@
 package com.jim.server.service;
 
-import com.jim.server.pojo.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.jim.server.pojo.Menu;
+import com.jim.server.pojo.Admin;
 import com.jim.server.pojo.RespBean;
 import com.jim.server.pojo.Role;
 
@@ -40,4 +39,17 @@ public interface IAdminService extends IService<Admin> {
      */
     List<Role> getRoles(Integer adminId);
 
+    /**
+     * @Author: Jim
+     * @Description: 获取所有操作员
+     * @Params: 
+     */
+    List<Admin> getAllAdmins(String keywords);
+
+    /**
+     * @Author: Jim
+     * @Description: 更新操作员角色
+     * @Params: 
+     */
+    RespBean updateAdminRole(Integer adminId, Integer[] rids);
 }

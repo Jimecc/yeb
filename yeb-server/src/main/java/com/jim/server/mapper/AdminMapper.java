@@ -1,8 +1,8 @@
 package com.jim.server.mapper;
 
-import com.jim.server.pojo.Admin;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.jim.server.pojo.Menu;
+import com.jim.server.pojo.Admin;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,5 +16,11 @@ import java.util.List;
  */
 public interface AdminMapper extends BaseMapper<Admin> {
 
-    List<Menu> getMenusByAdminId(Integer id);
+   
+    /**
+     * @Author: Jim
+     * @Description: 获取所有操作员
+     * @Params: 
+     */
+    List<Admin> getAllAdmins(@Param("id") Integer id, @Param("keywords") String keywords);
 }
