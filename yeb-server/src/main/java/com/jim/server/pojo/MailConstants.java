@@ -19,15 +19,15 @@ public class MailConstants {
     // 最大重试次数
     public static final Integer MAX_TYP_COUNT = 3;
 
-    // 消息超市时间
+    // 消息超时时间
     public static final Integer MSG_TIMEOUT = 1;
 
     // 队列
-    public static final String MAIL_QUEUE_NAME = "mail.queue";
+    public static final String MAIL_QUEUE_NAME = "mail.welcome";
 
     // 交换机
     public static final String MAIL_EXCHANGE_NAME = "mail.exchange";
 
     // 路由键
-    public static final String MAIL_ROUTING_NAME ="mail.routing.key";
+    public static final String MAIL_ROUTING_KEY_NAME ="mail.routing.key";
 }

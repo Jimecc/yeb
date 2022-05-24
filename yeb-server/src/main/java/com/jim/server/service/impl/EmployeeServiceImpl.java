@@ -81,16 +81,16 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
             mailLog.setMsgId(msgId);
             mailLog.setEid(employee.getId());
             mailLog.setStatus(0);
-            mailLog.setRouteKey(MailConstants.MAIL_ROUTING_NAME);
+            mailLog.setRouteKey(MailConstants.MAIL_ROUTING_KEY_NAME);
             mailLog.setExchange(MailConstants.MAIL_EXCHANGE_NAME);
-            mailLog.setCount(MailConstants.MAX_TYP_COUNT);
+            mailLog.setCount(0);
             mailLog.setTryTime(LocalDateTime.now().plusMinutes(MailConstants.MSG_TIMEOUT));
             mailLog.setCreateTime(LocalDateTime.now());
             mailLog.setUpdateTime(LocalDateTime.now());
             mailLogMapper.insert(mailLog);
 
             // 发送信息
-            rabbitTemplate.convertAndSend(MailConstants.MAIL_EXCHANGE_NAME,MailConstants.MAIL_ROUTING_NAME,emp,new CorrelationData(msgId));
+            rabbitTemplate.convertAndSend("MailConstants.MAIL_EXCHANGE_NAME",MailConstants.MAIL_ROUTING_KEY_NAME,emp,new CorrelationData(msgId));
             return RespBean.success("添加成功");
         }
         return RespBean.error("添加失败");
