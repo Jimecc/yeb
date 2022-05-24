@@ -7,20 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Employee Submit">
-      <change afterPath="$PROJECT_DIR$/yeb-mail/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/jim/mail/MailApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/jim/mail/mail/MailReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/img/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Mail" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +202,7 @@
       <workItem from="1653360100051" duration="1146000" />
       <workItem from="1653361503467" duration="600000" />
       <workItem from="1653364552584" duration="167000" />
-      <workItem from="1653367799929" duration="8513000" />
+      <workItem from="1653367799929" duration="8581000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -469,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653356931572</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Mail">
+      <created>1653397333415</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1653397333416</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,6 +513,7 @@
     <MESSAGE value="DateConverter Submit" />
     <MESSAGE value="getEmployeeByPage PaginationInterceptor" />
     <MESSAGE value="Employee Submit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Employee Submit" />
+    <MESSAGE value="Mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mail" />
   </component>
 </project>
