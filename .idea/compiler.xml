@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="yeb-generator" />
+        <module name="yeb-mail" />
         <module name="yeb-server" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="yeb" options="-parameters" />
       <module name="yeb-generator" options="-parameters" />
+      <module name="yeb-mail" options="-parameters" />
       <module name="yeb-server" options="-parameters" />
     </option>
   </component>
