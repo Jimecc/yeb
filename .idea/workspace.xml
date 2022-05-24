@@ -9,24 +9,156 @@
   <component name="ChangeListManager">
     <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Employee Submit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Joblevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Joblevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Nation.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Nation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/PoliticsStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/PoliticsStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/banner2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/banner2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/EmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IEmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IEmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/target/classes/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-generator/target/classes/com/jim/generator/CodeGenerator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-generator/target/classes/com/jim/generator/CodeGenerator$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-generator/target/classes/com/jim/generator/CodeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/banner2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/YebApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/CaptchaConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/RedisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/Swagger2Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/exception/GlobalException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/JwtAuthencationTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/JwtTokenUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/RestAuthorizationEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/RestfulAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/SecurityConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/component/CustomFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/config/security/component/CustomUrlDecisionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/AdminRoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/AppraiseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/CaptchaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/DepartmentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/EmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/EmployeeEcController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/EmployeeRemoveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/EmployeeTrainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/JoblevelController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/MailLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/MenuRoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/NationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/OplogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/PermissController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/PoliticsStatusController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/PositionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/RoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/SalaryAdjustController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/SalaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/SysMsgContentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/controller/SysMsgController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/AdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/AdminRoleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/AppraiseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/DepartmentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/EmployeeEcMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/EmployeeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/EmployeeRemoveMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/EmployeeTrainMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/JoblevelMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/MailLogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/MenuMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/MenuRoleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/NationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/OplogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/PoliticsStatusMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/PositionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/RoleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/SalaryAdjustMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/SalaryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/SysMsgContentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/mapper/SysMsgMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/AdminLoginParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/AdminRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Appraise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/EmployeeEc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/EmployeeRemove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/EmployeeTrain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Joblevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/MailLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/MenuRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Nation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Oplog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/PoliticsStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/RespBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/Salary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/SalaryAdjust.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/SysMsg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/pojo/SysMsgContent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IAdminRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IAdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IAppraiseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IDepartmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IEmployeeEcService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IEmployeeRemoveService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IEmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IEmployeeTrainService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IJoblevelService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IMailLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IMenuRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IMenuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/INationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IOplogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IPoliticsStatusService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IPositionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/IRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/ISalaryAdjustService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/ISalaryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/ISysMsgContentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/ISysMsgService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/AdminRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/AdminServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/AppraiseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/DepartmentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/EmployeeEcServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/EmployeeRemoveServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/EmployeeTrainServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/JoblevelServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/MailLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/MenuRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/MenuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/NationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/OplogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/PoliticsStatusServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/PositionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/RoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/SalaryAdjustServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/SalaryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/SysMsgContentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/com/jim/server/service/impl/SysMsgServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/AdminMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/AdminRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/AppraiseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/DepartmentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/EmployeeEcMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/EmployeeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/EmployeeRemoveMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/EmployeeTrainMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/JoblevelMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/MailLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/MenuMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/MenuRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/NationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/OplogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/PoliticsStatusMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/PositionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/RoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/SalaryAdjustMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/SalaryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/SysMsgContentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/target/classes/mapper/SysMsgMapper.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +329,7 @@
       <workItem from="1653101615697" duration="1825000" />
       <workItem from="1653207157907" duration="18168000" />
       <workItem from="1653294671699" duration="4094000" />
-      <workItem from="1653304252795" duration="12630000" />
+      <workItem from="1653304252795" duration="13634000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -430,7 +562,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653315392244</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Employee Submit">
+      <created>1653322847384</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1653322847384</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Employee Submit">
+      <created>1653323119389</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1653323119389</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +587,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
