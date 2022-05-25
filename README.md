@@ -24,13 +24,19 @@
 <br>
 <br>
 
-# 启动项目方式：
+
+# 后端启动的注意事项
 -----
-1. 在 Navicat 或其他数据库可视化界面中新建`查询`并运行 `sql.yeb.sql` 文件
-修改`java.resources.application.yml`文件中的相关内容后，启动 YebApplication 就可以。
-主要修改内容包含：
-- 各类密码（主要为MySQL 数据库、Redis 等）
-- 如果您的 MySQL 版本为 5.7 （或更早），请删除数据库驱动中的`.cj`
+- 安装 rabiitmq 并启动（ Macbook 可以直接用 brew 进行安装）
+- 安装 redis 并启动
+- 申请网易/QQ 邮箱并申请开通 SMTP 后，将 username@163.com 以及 SMTP 密码填写到 yeb-mail 项目下的 application.yml 文件中
+- 使用 sql 文件初始化数据库
+- 安装 Maven，并下载相关依赖
+- 先启动 yeb-server 项目，后启动 yeb-mail 项目
+
+
+-----
+
  
 <br>
 <br>
