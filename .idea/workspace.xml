@@ -7,10 +7,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="Mail &amp;&amp; Clean">
+    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="MySQL">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/jim/mail/mail/MailReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/jim/mail/mail/MailReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/css/fontawesome-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/css/noscript.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/breakpoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/browser.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.dropotron.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.scrollex.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.scrolly.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_html-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_vars.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_vendor.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/noscript.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/banner2.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +71,11 @@
         <option name="argument" value="--tags" />
         <option name="title" value="All" />
       </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -65,6 +107,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -73,11 +116,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/yeb-mail/src/main/java/com/jim/mail" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/yeb-mail/src/main/resources/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/yeb-sql" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ReactorSettings">
@@ -85,11 +130,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/yeb-sql" />
+      <recent name="$PROJECT_DIR$/yeb-mail/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/yeb-mail/src/main/resources/img" />
       <recent name="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/controller" />
       <recent name="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/pojo" />
-      <recent name="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service" />
-      <recent name="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jim.server" />
@@ -206,7 +251,8 @@
       <workItem from="1653360100051" duration="1146000" />
       <workItem from="1653361503467" duration="600000" />
       <workItem from="1653364552584" duration="167000" />
-      <workItem from="1653367799929" duration="8928000" />
+      <workItem from="1653367799929" duration="31285000" />
+      <workItem from="1653456472979" duration="5730000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -474,7 +520,49 @@
       <option name="project" value="LOCAL" />
       <updated>1653397523917</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Mail &amp;&amp; Clean Password">
+      <created>1653397749397</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1653397749397</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Mail &amp;&amp; Clean Password">
+      <created>1653399313295</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1653399313295</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Test Jim branch">
+      <created>1653399921953</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1653399921953</updated>
+    </task>
+    <task id="LOCAL-00042" summary="MailLog_NotDONE">
+      <created>1653407591126</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1653407591126</updated>
+    </task>
+    <task id="LOCAL-00043" summary="MailLog_NotDONE">
+      <created>1653414764500</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1653414764500</updated>
+    </task>
+    <task id="LOCAL-00044" summary="MySQL">
+      <created>1653426837549</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1653426837549</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,15 +571,109 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="2ade5588-4a67-4974-97e6-058118643130">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="590045aa-54e9-4a47-81d3-199f33253053">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="98843000-0969-40cd-9685-1d693d8495d5">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
-                  <entry key="Show.Git.Branches" value="false" />
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -504,7 +686,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$/../" />
     </ignored-roots>
-    <MESSAGE value="Init Commit" />
     <MESSAGE value="Init Submit" />
     <MESSAGE value="Login Success" />
     <MESSAGE value="Captcha" />
@@ -526,6 +707,10 @@
     <MESSAGE value="Employee Submit" />
     <MESSAGE value="Mail" />
     <MESSAGE value="Mail &amp;&amp; Clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mail &amp;&amp; Clean" />
+    <MESSAGE value="Mail &amp;&amp; Clean Password" />
+    <MESSAGE value="Test Jim branch" />
+    <MESSAGE value="MailLog_NotDONE" />
+    <MESSAGE value="MySQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="MySQL" />
   </component>
 </project>

@@ -59,6 +59,7 @@ public class MailReceiver {
             helper.setText(mail,true);
             javaMailSender.send(msg);
             LOGGER.info("给【"+employee.getName()+"】\t"+employee.getEmail()+"\t的邮件发送成功");
+
         } catch (MessagingException e) {
             LOGGER.error("邮件发送失败");
         }
