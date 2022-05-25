@@ -34,7 +34,29 @@
         <result column="workAge" property="workAge" />
         <result column="salaryId" property="salaryId" />
     </resultMap>
-
+    <resultMap id="EmployeeWithSalary" type="com.jim.server.pojo.Employee" extends="BaseResultMap">
+        <association property="salary" javaType="com.jim.server.pojo.Salary">
+            <id column="sid" property="id"/>
+            <result column="sbasicSalary" property="basicSalary"/>
+            <result column="sbonus" property="bonus"/>
+            <result column="slunchSalary" property="lunchSalary"/>
+            <result column="strafficSalary" property="trafficSalary"/>
+            <result column="sallSalary" property="allSalary"/>
+            <result column="spensionBase" property="pensionBase"/>
+            <result column="spensionPer" property="pensionPer"/>
+            <result column="smedicalBase" property="medicalBase"/>
+            <result column="smedicalPer" property="medicalPer"/>
+            <result column="saccumulationFundBase"
+                    property="accumulationFundBase"/>
+            <result column="saccumulationFundPer"
+                    property="accumulationFundPer"/>
+            <result column="sname" property="name"/>
+        </association>
+        <association property="department"
+                     javaType="com.jim.server.pojo.Department">
+            <result column="dname" property="name"/>
+        </association>
+    </resultMap>
     <resultMap id="EmployeeInfo" type="com.jim.server.pojo.Employee" extends="BaseResultMap">
         <association property="nation" javaType="com.jim.server.pojo.Nation">
             <id column="nid" property="id" />
@@ -152,5 +174,30 @@
             and e.id = #{id}
         </if>
         order by e.id
+    </select>
+
+    <!--获取所有员工套账-->
+    <select id="getEmployeeWithSalary" resultMap="EmployeeWithSalary">
+        SELECT
+            e.*,
+            td.`name` as dname,
+            s.id AS sid,
+            s.`name` AS sname,
+            s.basicSalary AS sbasicSalary,
+            s.trafficSalary AS strafficSalary,
+            s.lunchSalary AS slunchSalary,
+            s.bonus AS sbonus,
+            s.allSalary AS sallSalary,
+            s.pensionPer AS spensionPer,
+            s.pensionBase AS spensionBase,
+            s.medicalPer AS smedicalPer,
+            s.medicalBase AS smedicalBase,
+            s.accumulationFundPer AS saccumulationFundPer,
+            s.accumulationFundBase AS saccumulationFundBase
+        FROM
+            t_employee as e
+                LEFT JOIN t_salary as s ON e.salaryId = s.id
+                LEFT JOIN t_department as td ON e.departmentId = td.id
+        ORDER BY e.id
     </select>
 </mapper>
