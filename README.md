@@ -2,6 +2,8 @@
 -----
 此项目来自Bilibili，视频地址：https://www.bilibili.com/video/BV1ff4y1M7XK?p=1
 ![示例图](https://files.catbox.moe/vme765.png)
+![邮件示例图](https://files.catbox.moe/t5sjdm.png)
+
 
 ### 主要技术栈
 #### 后端技术栈
