@@ -7,8 +7,12 @@ spring:
     host: smtp.163.com
     protocol: smtp
     default-encoding: UTF-8
-    password: 你的密码
-    username: 1234@163.com
+#    password: NZHOSHWRKWQZTXMG
+#    username: z17631089214@163.com
+    password: HVESGVPHBFNEUOQP
+    username: jumpforg@163.com
+#    password: ZITVDVEIUSGFFTKE
+#    username: jimecc@163.com
     port: 25
   rabbitmq:
     username: guest

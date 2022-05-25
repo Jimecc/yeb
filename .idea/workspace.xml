@@ -7,46 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="MySQL">
+    <list default="true" id="d44cfce5-9e21-4130-b790-7c8cba5ab735" name="Changes" comment="mail NotDONE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/jim/mail/mail/MailReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/jim/mail/mail/MailReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/css/fontawesome-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/css/noscript.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/breakpoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/browser.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.dropotron.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.scrollex.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/jquery.scrolly.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/js/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_html-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_vars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/libs/_vendor.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/sass/noscript.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/assets/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/jim/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +216,9 @@
       <workItem from="1653361503467" duration="600000" />
       <workItem from="1653364552584" duration="167000" />
       <workItem from="1653367799929" duration="31285000" />
-      <workItem from="1653456472979" duration="5730000" />
+      <workItem from="1653456472979" duration="7346000" />
+      <workItem from="1653464047536" duration="31000" />
+      <workItem from="1653464217859" duration="2691000" />
     </task>
     <task id="LOCAL-00001" summary="Init Submit">
       <created>1652079387041</created>
@@ -562,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653426837549</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="mail NotDONE">
+      <created>1653462288821</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1653462288821</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +659,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$/../" />
     </ignored-roots>
-    <MESSAGE value="Init Submit" />
     <MESSAGE value="Login Success" />
     <MESSAGE value="Captcha" />
     <MESSAGE value="Menus Submit" />
@@ -711,6 +683,7 @@
     <MESSAGE value="Test Jim branch" />
     <MESSAGE value="MailLog_NotDONE" />
     <MESSAGE value="MySQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="MySQL" />
+    <MESSAGE value="mail NotDONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="mail NotDONE" />
   </component>
 </project>
