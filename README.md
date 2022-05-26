@@ -8,12 +8,6 @@
 ### 主要技术栈
 #### 后端技术栈
 ![后端技术栈](https://files.catbox.moe/72gk5j.png)
-- Springboot
-- Redis
-- Jwt
-- Security
-- MyBatis-Plus
-- 数据库存储过程
 
 
 <br>
