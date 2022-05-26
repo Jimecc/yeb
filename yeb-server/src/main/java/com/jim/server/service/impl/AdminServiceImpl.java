@@ -19,6 +19,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -119,6 +120,28 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         Integer result = adminRoleMapper.addAdminRole(adminId,rids);
         if(rids.length == result) {
             return RespBean.success("更新成功");
+        }
+        return RespBean.error("更新失败");
+    }
+
+    /**
+     * @Author: Jim
+     * @Description: 更新用户密码
+     * @param oldPass
+     * @param pass
+     * @param adminId
+     */
+    @Override
+    public RespBean updateAdminPassword(String oldPass, String pass, Integer adminId) {
+        Admin admin = adminMapper.selectById(adminId);
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        // 判断旧密码是否正确
+        if(encoder.matches(oldPass,admin.getPassword())){
+            admin.setPassword(encoder.encode(pass));
+            int result = adminMapper.updateById(admin);
+            if(1 == result){
+                return  RespBean.success("更新成功");
+            }
         }
         return RespBean.error("更新失败");
     }
