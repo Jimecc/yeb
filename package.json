@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "element-ui": "^2.15.8"
+    "axios": "^0.27.2",
+    "element-ui": "^2.15.8",
+    "vue-axios": "^3.4.1"
   }
 }
