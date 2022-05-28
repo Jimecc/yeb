@@ -7,6 +7,10 @@ import App from './App.vue';
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 
+import store from './store'
+
+
+
 import {postRequest} from "@/utils/api";
 import {getRequest} from "@/utils/api";
 import {putRequest} from "@/utils/api";
@@ -18,5 +22,6 @@ Vue.prototype.putRequest = putRequest;
 Vue.prototype.deleteRequest = deleteRequest;
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
