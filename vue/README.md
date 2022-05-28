@@ -1,4 +1,4 @@
-# yeb-web
+# vue
 
 ## Project setup
 ```
