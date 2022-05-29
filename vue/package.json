@@ -10,9 +10,10 @@
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.8",
+    "font-awesome": "^4.7.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuex": "^4.0.2"
+    "vuex": "^3.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.4",
