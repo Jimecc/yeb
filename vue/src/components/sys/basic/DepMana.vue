@@ -1,12 +1,12 @@
 <template>
-<div>
-  职位管理
-</div>
+  <div>
+    部门管理123
+  </div>
 </template>
 
 <script>
 export default {
-  name: "PosMana"
+  name: "DepMana"
 }
 </script>
 
