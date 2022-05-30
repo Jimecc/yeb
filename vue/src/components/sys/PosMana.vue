@@ -1,13 +1,12 @@
 <template>
-  <div>
-    Test1
-  </div>
-
+<div>
+  职位管理
+</div>
 </template>
 
 <script>
 export default {
-  name: "Test1"
+  name: "PosMana"
 }
 </script>
 
