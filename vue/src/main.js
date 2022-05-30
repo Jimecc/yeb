@@ -25,10 +25,22 @@ import {initMenu} from "./utils/menu";
 router.beforeEach((to,from,next)=>{
   if(window.sessionStorage.getItem('tokenStr')){
     initMenu(router,store);
+    if(!window.sessionStorage.getItem('user')){
+      // 判断用户信息是否存在
+      return getRequest('/admin/info').then(resp=>{
+        if(resp){
+          // 存入用户信息
+          window.sessionStorage.setItem('user',JSON.stringify(resp));
+          next();
+        }
+      })
+    }
     next();
   }else{
     if(to.path == '/'){
       next();
+    }else{
+      next('/redirect='+to.path);
     }
   }
 })
