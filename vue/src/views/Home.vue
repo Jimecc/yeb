@@ -7,7 +7,17 @@
 
       <el-dropdown class="userInfo" @command="commandHandler">
         <span class="el-dropdown-link">
-          <i><img :src="user.userFace"></i><span style="color:#fff;margin-right: 50px">欢迎您，{{ user.name }}</span>
+          <i>
+            <img :src="user.userFace">
+          </i>
+          <el-divider direction="vertical"></el-divider>
+          <span style="color:#fff;margin-left:10px;margin-right: 10px">
+            欢迎您，{{ user.name }}
+          </span>
+          <el-divider direction="vertical"></el-divider>
+          <span style="color:#fff;margin-left:10px;margin-right: 10px">
+            退出登录
+          </span>
         </span>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item command="userInfo">个人中心</el-dropdown-item>
@@ -27,7 +37,7 @@
           <el-submenu :index="index+''" v-for="(item,index) in routes"
                       :key="index"
                       v-if="!item.hidden">
-            <template slot="title"><i :class="item.iconCls" style="color:mediumaquamarine;margin-right:5px"></i>
+            <template slot="title"><i :class="item.iconCls" style="color:#f9a647;margin-right:5px"></i>
               <span>
                 {{ item.name }}
               </span>
@@ -47,7 +57,8 @@
         <div class="homeWelcome" v-if="this.$router.currentRoute.path=='/home'">
           欢迎来到云E办系统
         </div>
-        <router-view/>
+
+        <router-view class="homeRouterView"/>
       </el-main>
     </el-container>
   </el-container>
@@ -102,12 +113,13 @@ export default {
 
 
 .homeHeader {
-  background-color: #409eff;
+  background-color: #858586;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 15px;
   box-sizing: border-box;
+
 }
 
 .homeHeader .title {
@@ -124,7 +136,7 @@ export default {
   text-align: left;
   font-size: 20px;
   font-family: 华文行楷;
-  color: #409eff;
+  color: #154599;
   padding-top: 7px;
 }
 
@@ -144,5 +156,22 @@ export default {
   display: flex;
   align-items: center;
 }
+
+.el-tabs__item {
+
+  color: #EDCFAB !important;
+
+}
+/*.is-active{*/
+/*  color: #f9a647 !important;*/
+/*  background-color: #F0E7D5 !important;*/
+/*}*/
+
+.el-breadcrumb__item {
+  font-size: 15px;
+}
+
+
+
 
 </style>

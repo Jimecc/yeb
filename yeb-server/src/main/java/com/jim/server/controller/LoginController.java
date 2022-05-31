@@ -8,6 +8,7 @@ import com.jim.server.service.IAdminService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +26,6 @@ public class LoginController {
     @ApiOperation(value="登陆之后返回 token")
     @PostMapping("/login")
     public RespBean login (@RequestBody AdminLoginParam adminLoginParam, HttpServletRequest request){
-        System.out.println(adminLoginParam.toString());
         return adminService.login(adminLoginParam.getUsername(),adminLoginParam.getPassword(),adminLoginParam.getCode(),request);
     }
 
@@ -42,7 +42,7 @@ public class LoginController {
     }
 
     @ApiOperation(value="获取当前登录用户信息")
-    @PostMapping("/admin/info")
+    @GetMapping("/admin/info")
     public Admin getAdminInfo(Principal principal){
         if(null == principal){
             return null;

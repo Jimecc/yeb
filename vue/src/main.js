@@ -5,7 +5,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 import 'font-awesome/css/font-awesome.css'
 
-Vue.use(ElementUI);
+Vue.use(ElementUI,{size:'small'});
 Vue.config.productionTip = false
 
 
@@ -40,7 +40,7 @@ router.beforeEach((to,from,next)=>{
     if(to.path == '/'){
       next();
     }else{
-      next('/redirect='+to.path);
+      next('/?redirect='+to.path);
     }
   }
 })

@@ -1,13 +1,12 @@
 <template>
   <div>
-    Test1
+    部门管理
   </div>
-
 </template>
 
 <script>
 export default {
-  name: "Test1"
+  name: "DepMana"
 }
 </script>
 
