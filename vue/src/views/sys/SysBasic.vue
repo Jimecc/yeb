@@ -1,6 +1,6 @@
 <template>
 <div>
-  基础信息设置
+  基础信息设置1
 </div>
 </template>
 
