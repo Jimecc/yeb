@@ -3,37 +3,57 @@
   <el-container>
     <el-header class="homeHeader">
 
-      <div class="title"> 云 E 办</div>
+      <div style="display:flex">
+        <img src="../assets/logoBlack.png" style="width: 40px;height: 40px;margin-top:5px;margin-left: 20px" @click="goHome">
+        <span class="title" v-if="!this.isCollapse"  @click="goHome" style="margin-top: 5px"> 云 E 办</span>
+        <el-button v-if="!this.isCollapse" icon="el-icon-s-fold" @click="switchMenu" type="text" style="font-size: 30px;color: white;margin-left:40px"></el-button>
+        <el-button v-if="this.isCollapse" icon="el-icon-s-unfold" @click="switchMenu" type="text" style="font-size: 30px;color: white;margin-left:40px"></el-button>
+        <h3 class="titleWelcome">欢迎进入 云 E 办 线上办公平台</h3>
+      </div>
 
-      <el-dropdown class="userInfo" @command="commandHandler">
-        <span class="el-dropdown-link">
-          <i>
-            <img :src="user.userFace">
-          </i>
-          <el-divider direction="vertical"></el-divider>
-          <span style="color:#fff;margin-left:10px;margin-right: 10px">
-            欢迎您，{{ user.name }}
-          </span>
-          <el-divider direction="vertical"></el-divider>
-          <span style="color:#fff;margin-left:10px;margin-right: 10px">
-            退出登录
-          </span>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item command="userInfo">个人中心</el-dropdown-item>
-          <el-dropdown-item command="setting">设置</el-dropdown-item>
-          <el-dropdown-item command="logout">退出登录</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+      <div class="userInfo">
+        <i class="el-dropdown-link" style="margin-bottom: 4px">
+          <img :src="user.userFace">
+        </i>
+        <i style="margin-top: 4px">
+          <el-divider direction="vertical" ></el-divider>
+        </i>
+        <el-dropdown @command="commandHandler">
+            <span class="el-dropdown-link" style="margin-top: 6px">
+
+
+
+
+              <span style="color:#fff;margin-left:10px;margin-right: 10px;margin-top: 2px">
+                欢迎您，{{ user.name }}
+              </span>
+
+
+            </span>
+
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item command="userInfo">个人中心</el-dropdown-item>
+              <el-dropdown-item command="setting">设置</el-dropdown-item>
+              <el-dropdown-item command="logout">退出登录</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+        <i style="margin-top: 4px">
+          <el-divider direction="vertical" ></el-divider>
+        </i>
+        <el-button type="text" style="margin-left:8px;color:#fff;font-size: 14px" icon="el-icon-switch-button" @click="layout">
+          退出登录
+        </el-button>
+
+      </div>
 
 
     </el-header>
 
 
     <el-container>
-      <el-aside width="200px">
+      <el-aside :width="sideWidth">
 
-        <el-menu router unique-opened>
+        <el-menu class="el-menu-vertical-demo" router unique-opened :collapse="isCollapse">
           <el-submenu :index="index+''" v-for="(item,index) in routes"
                       :key="index"
                       v-if="!item.hidden">
@@ -50,15 +70,18 @@
       </el-aside>
       <el-main>
 
-        <el-breadcrumb separator-class="el-icon-arrow-right" v-if="this.$router.currentRoute.path!='/home'">
-          <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>{{ this.$router.currentRoute.name }}</el-breadcrumb-item>
-        </el-breadcrumb>
-        <div class="homeWelcome" v-if="this.$router.currentRoute.path=='/home'">
-          欢迎来到云E办系统
-        </div>
+        <div>
+          <el-breadcrumb separator-class="el-icon-arrow-right" v-if="this.$router.currentRoute.path!='/home'">
+            <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>{{ this.$router.currentRoute.name }}</el-breadcrumb-item>
+          </el-breadcrumb>
 
-        <router-view class="homeRouterView"/>
+          <span class="homeWelcome" v-if="this.$router.currentRoute.path=='/home'">
+            欢迎来到云E办系统
+          </span>
+
+          <router-view class="homeRouterView"/>
+        </div>
       </el-main>
     </el-container>
   </el-container>
@@ -73,7 +96,9 @@ export default {
   name: "Home",
   data(){
     return{
-      user:JSON.parse(window.sessionStorage.getItem('user'))
+      user:JSON.parse(window.sessionStorage.getItem('user')),
+      isCollapse: false,
+      sideWidth:'200px'
     }
   },
   computed:{
@@ -82,6 +107,38 @@ export default {
     }
   },
   methods:{
+    goHome(){
+      this.$router.push('/home');
+    },
+    switchMenu(){
+      this.isCollapse = !this.isCollapse;
+      if(!this.isCollapse){
+        this.sideWidth = '200px';
+      }else{
+        this.sideWidth = '80px';
+      }
+
+    },
+    layout(){
+      this.$confirm('此操作退出登录，是否继续？','提示',{
+        confirmButtonText:'确定',
+        confirmbuttonText:'取消',
+        type:'warning'
+      }).then(()=>{
+        this.postRequest('/logout');
+        // 清空用户信息
+        window.sessionStorage.removeItem('tokenStr');
+        window.sessionStorage.removeItem('user');
+        this.$store.commit('initRoutes',[]);
+        // 跳转到登录页
+        this.$router.replace('/');
+      }).catch(()=>{
+        this.$message({
+          type:'info',
+          message:'取消'
+        });
+      });
+    },
     commandHandler(command){
       if(command == 'logout'){
         this.$confirm('此操作退出登录，是否继续？','提示',{
@@ -111,9 +168,12 @@ export default {
 
 <style>
 
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  min-height: 400px;
+}
 
 .homeHeader {
-  background-color: #858586;
+  background-color: #9c938a;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -126,10 +186,21 @@ export default {
   font-size: 30px;
   font-family: 华文行楷;
   color: #ffffff;
+  margin-top: 4px;
+  margin-left: 30px;
 }
-
+.homeHeader .titleWelcome{
+  font-size: 14px;
+  font-family: 华文行楷;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-left: 10px;
+}
 .homeHeader .userInfo {
   cursor: pointer;
+  margin-top: 14px;
+  display: flex;
+  margin-bottom: 13px;
 }
 
 .homeWelcome {
