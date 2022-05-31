@@ -1,16 +1,16 @@
 <template>
-  <div>
-    综合信息统计
-  </div>
+<div>
+     系统管理
+
+</div>
 </template>
 
 <script>
 export default {
-  name: "StaAll"
+  name: "SysCfg"
 }
 </script>
 
 <style scoped>
 
 </style>
-
