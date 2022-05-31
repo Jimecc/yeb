@@ -5,7 +5,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 import 'font-awesome/css/font-awesome.css'
 
-Vue.use(ElementUI);
+Vue.use(ElementUI,{size:'small'});
 Vue.config.productionTip = false
 
 
