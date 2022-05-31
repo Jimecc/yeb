@@ -162,10 +162,10 @@ export default {
   color: #EDCFAB !important;
 
 }
-.is-active{
-  color: #f9a647 !important;
-  background-color: #F0E7D5 !important;
-}
+/*.is-active{*/
+/*  color: #f9a647 !important;*/
+/*  background-color: #F0E7D5 !important;*/
+/*}*/
 
 .el-breadcrumb__item {
   font-size: 15px;
