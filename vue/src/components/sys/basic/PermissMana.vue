@@ -8,10 +8,20 @@
       <el-button size="small" type="primary" icon="el-icon-plus">添加角色</el-button>
     </div>
     <div class="permissManaMain">
-      <el-collapse accordion>
+      <el-collapse accordion @change="change">
         <el-collapse-item :title="r.nameZh" :name="r.id" v-for="(r,index) in roles" :key="index">
-          <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
-          <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
+          <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>可访问资源</span>
+              <el-button style="float: right; padding: 3px 0;color:#ff0000;font-size: 18px" type="text" icon="el-icon-delete"></el-button>
+            </div>
+            <div>
+              <el-tree show-checkbox
+                       :data="allMenus"
+                       :props="defaultProps">
+              </el-tree>
+            </div>
+          </el-card>
         </el-collapse-item>
       </el-collapse>
     </div>
@@ -27,13 +37,30 @@ export default {
           name:'',
           nameZh:''
       },
-      roles:[]
+      roles:[],
+      allMenus:[],
+      defaultProps: {
+        children: 'children',
+        label: 'name'
+      }
     }
   },
   mounted() {
     this.initRoles();
   },
   methods:{
+    initAllMenus(){
+      this.getRequest('/system/basic/permiss/menus').then(resp=>{
+        if(resp){
+          this.allMenus = resp;
+        }
+      })
+    },
+    change(rid){
+      if(rid){
+        this.initAllMenus();
+      }
+    },
     initRoles(){
       this.getRequest('/system/basic/permiss/').then(resp=>{
         if(resp){
@@ -56,7 +83,7 @@ export default {
   }
   .permissManaMain{
     margin-top: 10px;
-    width: 80%;
+    width: 70%;
   }
 
 
