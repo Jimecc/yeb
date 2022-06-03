@@ -13,7 +13,7 @@
 
       <div class="userInfo">
         <i class="el-dropdown-link" style="margin-bottom: 4px">
-          <img :src="user.userFace">
+          <img class="img-border" :src="user.userFace">
         </i>
         <el-dropdown @command="commandHandler">
             <span class="el-dropdown-link" style="margin-top: 6px">
@@ -21,7 +21,7 @@
 
 
 
-              <span style="color:#fff;margin-left:10px;margin-right: 10px;margin-top: 2px">
+              <span style="color:#fff;margin-right: 10px;margin-top: 2px">
                 欢迎您，{{ user.name }}
               </span>
 
@@ -164,6 +164,13 @@ export default {
 </script>
 
 <style>
+
+.img-border{
+  border-color: #fff;
+  border-style:solid;
+  border-width:1px;
+  border-radius: 100px;
+}
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   min-height: 400px;

@@ -36,7 +36,24 @@
           <div>
             用户角色：
             <el-tag style="margin-right: 4px" type="success" v-for="(role,index) in admin.roles" :key="indexj">{{role.nameZh}}</el-tag>
-            <el-button type="text" icon="el-icon-more"></el-button>
+            <el-popover
+                @show="showPop(admin)"
+                @hide="hidePop(admin)"
+                placement="right"
+                title="角色"
+                width="200"
+                trigger="click">
+              <el-select v-model="selectedRoles" multiple placeholder="请选择">
+                <el-option
+                    v-for="(r,index) in allRoles"
+                    :key="index"
+                    :label="r.nameZh"
+                    :value="r.id">
+                </el-option>
+              </el-select>
+              <el-button slot="reference" type="text" icon="el-icon-more"></el-button>
+            </el-popover>
+
           </div>
           <div>
             备注：{{admin.remark}}
@@ -55,13 +72,67 @@ export default {
   data(){
     return{
       admins:[],
-      keywords:''
+      keywords:'',
+      allRoles:[],
+      selectedRoles:[]
     }
   },
   mounted() {
     this.initAdmins();
   },
   methods:{
+    hidePop(admin){
+      let roles = [];
+      Object.assign(roles,admin.roles);
+      let flag= false;
+
+      if(roles.length != this.selectedRoles.length){
+        flag = true;
+      }else{
+        for(let i = i;i<roles.length;i++){
+          let role = roles[i];
+          for(let j = 0;j<this.selectedRoles.length;j++){
+            let sr = this.selectedRoles[j];
+            if(role.id == sr){
+              roles.splice(i,1);
+              i--;
+              break;
+            }
+          }
+        }
+        if(roles.length !=0){
+          flag = true;
+        }
+      }
+      if(flag){
+        let url = '/admin/role?adminId='+admin.id;
+        this.selectedRoles.forEach(sr=>{
+          url+='&rids='+sr;
+        });
+        this.putRequest(url).then(resp=>{
+          if(resp){
+            this.initAdmins();
+          }
+        });
+      }
+
+    },
+    showPop(admin){
+      this.initAllRoles();
+      let roles = admin.roles;
+      this.selectedRoles = [];
+      roles.forEach(r=>{
+        this.selectedRoles.push(r.id);
+      });
+
+    },
+    initAllRoles(){
+      this.getRequest('/admin/roles').then(resp=>{
+        if(resp){
+          this.allRoles = resp;
+        }
+      })
+    },
     initAdmins(){
       this.getRequest('/admin/?keywords='+this.keywords).then(resp=>{
         if(resp){
