@@ -4,7 +4,7 @@
     <el-header class="homeHeader">
 
       <div style="display:flex">
-        <img src="../assets/logoBlack.png" style="width: 40px;height: 40px;margin-top:5px;margin-left: 20px" @click="goHome">
+        <img src="../assets/logoBlack2.png" style="width: 40px;height: 40px;margin-top:5px;margin-left: 20px" @click="goHome">
         <span class="title" v-if="!this.isCollapse"  @click="goHome" style="margin-top: 5px"> 云 E 办</span>
         <el-button v-if="!this.isCollapse" icon="el-icon-s-fold" @click="switchMenu" type="text" style="font-size: 30px;color: white;margin-left:40px"></el-button>
         <el-button v-if="this.isCollapse" icon="el-icon-s-unfold" @click="switchMenu" type="text" style="font-size: 30px;color: white;margin-left:40px"></el-button>
@@ -14,9 +14,6 @@
       <div class="userInfo">
         <i class="el-dropdown-link" style="margin-bottom: 4px">
           <img :src="user.userFace">
-        </i>
-        <i style="margin-top: 4px">
-          <el-divider direction="vertical" ></el-divider>
         </i>
         <el-dropdown @command="commandHandler">
             <span class="el-dropdown-link" style="margin-top: 6px">
