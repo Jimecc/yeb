@@ -300,7 +300,19 @@
           </el-col>
           <el-col :span="6">
             <el-form-item label="所属部门" prop="departmentId">
-              <el-input v-model="emp.departmentId" placeholder="请输入部门..." size="mini" style="width: 150px" prefix-icon="el-icon-edit"></el-input>
+              <el-popover
+                  placement="right"
+                  title="选择部门"
+                  width="200"
+                  trigger="manual"
+                  v-model="visible">
+                <el-tree :data="allDeps" default-expand-all :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+                <div slot="reference" style="width: 150px;display: inline-flex;border: 1px solid #dedede;height: 24px;border-radius: 5px;cursor: pointer;align-items: center;font-size:13px;padding-left: 8px;box-sizing: border-box" @click="showDepView">
+                  {{inputDepName}}
+                </div>
+
+              </el-popover>
+
             </el-form-item>
           </el-col>
           <el-col :span="7">
@@ -420,7 +432,7 @@
 
     <span slot="footer" class="dialog-footer">
     <el-button @click="dialogVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+    <el-button type="primary" @click="doAddEmp">确 定</el-button>
   </span>
   </el-dialog>
 </div>
@@ -442,6 +454,13 @@ export default {
       joblevels:[],
       politicsstatus:[],
       positions:[],
+      visible:false,
+      defaultProps:{
+        children:'children',
+        label:'name'
+      },
+      inputDepName:'',
+      allDeps:[],
       tiptopDegrees:['博士','硕士','本科','大专','高中','初中','小学','其他'],
       emp:{
         id: 1,
@@ -481,6 +500,22 @@ export default {
     this.initData();
   },
   methods:{
+    doAddEmp(){
+      this.postRequest('/employee/basic/',this.emp).then(resp=>{
+        if(resp){
+          this.dialogVisible = false;
+          this.initEmps();
+        }
+      })
+    },
+    handleNodeClick(data){
+      this.inputDepName = data.name;
+      this.emp.departmentId = data.id;
+      this.visible = !this.visible;
+    },
+    showDepView(){
+      this.visible = !this.visible;
+    },
     initPositions(){
       this.getRequest('/employee/basic/position').then(resp=>{
         if(resp){
@@ -525,6 +560,16 @@ export default {
         });
       }else{
         this.politicsstatus = JSON.parse(window.sessionStorage.getItem('politicsstatus'));
+      }
+      if(!window.sessionStorage.getItem('allDeps')){
+        this.getRequest('/employee/basic/deps').then(resp=>{
+          if(resp){
+            this.allDeps = resp;
+            window.sessionStorage.setItem('allDeps',JSON.stringify(resp));
+          }
+        });
+      }else{
+        this.allDeps = JSON.parse(window.sessionStorage.getItem('allDeps'));
       }
 
     },
