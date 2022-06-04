@@ -2,8 +2,8 @@
 <div>
   <div style="margin-top:10px;display:flex;justify-content: space-between">
     <div>
-      <el-input style="width: 400px;margin-right: 10px" prefix-icon="el-icon-search" placeholder="请输入员工姓名进行搜索..."></el-input>
-      <el-button type="primary" icon="el-icon-search">搜索</el-button>
+      <el-input style="width: 400px;margin-right: 10px" v-model="empName" clearable @keydown.enter.native="initEmps" prefix-icon="el-icon-search" placeholder="请输入员工姓名进行搜索..."></el-input>
+      <el-button type="primary" icon="el-icon-search" @click="initEmps">搜索</el-button>
       <el-button type="primary">
         <i class="fa fa-angle-double-down" aria-hidden="true"></i>高级搜索</el-button>
     </div>
@@ -52,7 +52,7 @@
         </el-table-column>
         <el-table-column
             prop="idCard"
-            width="150"
+            width="180"
             align="left"
             label="身份证号">
         </el-table-column>
@@ -68,12 +68,12 @@
         </el-table-column>
         <el-table-column
             prop="nativePlace"
-            width="80"
+            width="100"
             label="籍贯">
         </el-table-column>
         <el-table-column
             prop="politicsStatus.name"
-            width="100"
+            width="120"
             label="政治面貌">
         </el-table-column>
         <el-table-column
@@ -96,7 +96,7 @@
       </el-table-column>
       <el-table-column
           prop="address"
-          width="250"
+          width="300"
           align="left"
           label="通讯地址">
       </el-table-column>
@@ -129,8 +129,7 @@
       </el-table-column>
       <el-table-column
           prop="school"
-          width="100"
-          align="left"
+          width="150"
           label="毕业学校">
       </el-table-column>
       <el-table-column
@@ -174,7 +173,7 @@
           align="left"
           label="合同期限">
         <template slot-scope="scope">
-          <el-tag>{{scope.row.contractTerm}}</el-tag>年
+          <el-tag style="width: 60px;">{{scope.row.contractTerm}}</el-tag>年
         </template>
       </el-table-column>
       <el-table-column
@@ -193,6 +192,7 @@
           style="margin-top: 10px"
           background
           @current-change="currentChange"
+          @size-change="sizeChange"
           layout="sizes,prev, pager, next,jumper,->,total"
           :total="total">
       </el-pagination>
@@ -210,24 +210,30 @@ export default {
       loading:false,
       total:0,
       page:1,
-      size:10
+      size:10,
+      empName:''
     }
   },
   mounted() {
     this.initEmps();
   },
   methods:{
+    sizeChange(size){
+      this.size=size;
+      this.initEmps();
+    },
     currentChange(currentPage){
       this.page = currentPage;
       this.initEmps();
     },
     initEmps(){
       this.loading = true;
-      this.getRequest('/employee/basic/?currentPage='+this.page+'&size='+this.size).then(resp=>{
+      this.getRequest('/employee/basic/?currentPage='+this.page+'&size='+this.size+'&name='+this.empName).then(resp=>{
         this.loading=false;
         if(resp){
           this.total = resp.total;
           this.emps = resp.data;
+
         }
       })
     }
