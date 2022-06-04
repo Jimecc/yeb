@@ -235,10 +235,10 @@
             <el-form-item label="政治面貌" prop="politicId">
               <el-select size="mini" style="width: 200px" v-model="emp.politicId" placeholder="政治面貌">
                 <el-option
-                    v-for="item in options"
-                    :key="item.value"
-                    :label="item.label"
-                    :value="item.value">
+                    v-for="item in politicsstatus"
+                    :key="item.id"
+                    :label="item.name"
+                    :value="item.id">
                 </el-option>
               </el-select>
             </el-form-item>
@@ -249,10 +249,10 @@
             <el-form-item label="民族" prop="nationId">
               <el-select size="mini" style="width: 150px" v-model="emp.nationId" placeholder="民族">
               <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
+                  v-for="item in nations"
+                  :key="item.id"
+                  :label="item.name"
+                  :value="item.id">
               </el-option>
               </el-select>
             </el-form-item>
@@ -278,10 +278,10 @@
             <el-form-item label="职位" prop="posId">
               <el-select size="mini" style="width: 150px" v-model="emp.posId" placeholder="职位">
                 <el-option
-                    v-for="item in options"
-                    :key="item.value"
-                    :label="item.label"
-                    :value="item.value">
+                    v-for="item in positions"
+                    :key="item.id"
+                    :label="item.name"
+                    :value="item.id">
                 </el-option>
               </el-select>
             </el-form-item>
@@ -290,10 +290,10 @@
             <el-form-item label="职称" prop="jobLevelId">
               <el-select size="mini" style="width: 150px" v-model="emp.jobLevelId" placeholder="职称">
                 <el-option
-                    v-for="item in options"
-                    :key="item.value"
-                    :label="item.label"
-                    :value="item.value">
+                    v-for="item in joblevels"
+                    :key="item.id"
+                    :label="item.name"
+                    :value="item.id">
                 </el-option>
               </el-select>
             </el-form-item>
@@ -312,17 +312,17 @@
         <el-row>
           <el-col :span="6">
             <el-form-item label="工号" prop="workID">
-              <el-input v-model="emp.workID" placeholder="请输入工号..." size="mini" style="width: 150px " prefix-icon="el-icon-edit"></el-input>
+              <el-input disabled v-model="emp.workID" placeholder="请输入工号..." size="mini" style="width: 150px " prefix-icon="el-icon-edit"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="5">
             <el-form-item label="学历" prop="tiptopDegree">
               <el-select size="mini" style="width: 150px" v-model="emp.tiptopDegree" placeholder="学历">
                 <el-option
-                    v-for="item in options"
-                    :key="item.value"
-                    :label="item.label"
-                    :value="item.value">
+                    v-for="item in tiptopDegrees"
+                    :key="item"
+                    :label="item"
+                    :value="item">
                 </el-option>
               </el-select>
             </el-form-item>
@@ -437,23 +437,12 @@ export default {
       page:1,
       size:10,
       empName:'',
-      dialogVisible: true,
-      options: [{
-        value: '选项1',
-        label: '黄金糕'
-      }, {
-        value: '选项2',
-        label: '双皮奶'
-      }, {
-        value: '选项3',
-        label: '蚵仔煎'
-      }, {
-        value: '选项4',
-        label: '龙须面'
-      }, {
-        value: '选项5',
-        label: '北京烤鸭'
-      }],
+      dialogVisible: false,
+      nations:[],
+      joblevels:[],
+      politicsstatus:[],
+      positions:[],
+      tiptopDegrees:['博士','硕士','本科','大专','高中','初中','小学','其他'],
       emp:{
         id: 1,
         name: '',
@@ -489,9 +478,59 @@ export default {
   },
   mounted() {
     this.initEmps();
+    this.initData();
   },
   methods:{
+    initPositions(){
+      this.getRequest('/employee/basic/position').then(resp=>{
+        if(resp){
+          this.positions = resp;
+        }
+      })
+    },
+    getMaxWorkID(){
+      this.getRequest('/employee/basic/maxWorkID').then(resp=>{
+        if(resp){
+          this.emp.workID = resp.obj;
+        }
+      })
+    },
+    initData(){
+      if(!window.sessionStorage.getItem('nations')){
+        this.getRequest('/employee/basic/nation').then(resp=>{
+          if(resp){
+            this.nations = resp;
+            window.sessionStorage.setItem('nations',JSON.stringify(resp));
+          }
+        });
+      }else{
+        this.nations = JSON.parse(window.sessionStorage.getItem('nations'));
+      }
+      if(!window.sessionStorage.getItem('joblevels')){
+        this.getRequest('/employee/basic/joblevel').then(resp=>{
+          if(resp){
+            this.joblevels = resp;
+            window.sessionStorage.setItem('joblevels',JSON.stringify(resp));
+          }
+        });
+      }else{
+        this.joblevels = JSON.parse(window.sessionStorage.getItem('joblevels'));
+      }
+      if(!window.sessionStorage.getItem('politicsstatus')){
+        this.getRequest('/employee/basic/politicsStatus').then(resp=>{
+          if(resp){
+            this.politicsstatus = resp;
+            window.sessionStorage.setItem('politicsstatus',JSON.stringify(resp));
+          }
+        });
+      }else{
+        this.politicsstatus = JSON.parse(window.sessionStorage.getItem('politicsstatus'));
+      }
+
+    },
     showAddEmpView(){
+      this.getMaxWorkID();
+      this.initPositions();
       this.dialogVisible = true;
     },
     sizeChange(size){
