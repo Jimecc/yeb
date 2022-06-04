@@ -87,61 +87,56 @@
 
     <!-- 获取所有员工（分页） -->
     <select id="getEmployeeByPage" resultMap="EmployeeInfo">
-        SELECT
-            e.*,
-            n.id AS nid,
-            n.`name` AS nname,
-            p.id AS pid,
-            p.`name` AS pname,
-            d.id AS did,
-            d.`name` AS dname,
-            j.id AS jid,
-            j.`name` AS jname,
-            pos.id AS posid,
-            pos.`name` AS posname
-        FROM
-            t_employee e,
-            t_nation n,
-            t_politics_status p,
-            t_department d,
-            t_joblevel j,
-            t_position pos
-        WHERE
-            e.nationID = n.id
-          AND
-            e.politicId = p.id
-          AND
-            e.departmentID = d.id
-          AND
-            e.jobLevelId = j.id
-          AND
-            e.posId = pos.id
-          <if test="null!=employee.name and ''!=employee.name">
-              AND e.`name` like CONCAT('%','王','%')
-          </if>
-        <if test="null!=employee.politicId">
-            AND e.politicId = #{employee.politicId}
-        </if>
-        <if test="null!=employee.nationId">
-            AND e.nationId = #{employee.nationId}
-        </if>
-        <if test="null!=employee.jobLevelId">
-            AND e.jobLevelId = #{employee.jobLevelId}
-        </if>
-        <if test="null!=employee.posId">
-            AND e.posId = #{employee.posId}
-        </if>
-        <if test="null!=employee.engageForm">
-            AND e.engageForm = #{employee.engageForm}
-        </if>
-        <if test="null!=employee.departmentId">
-            AND e.departmentId = #{employee.departmentId}
-        </if>
-        <if test="null!=beginDateScope and 2==beginDateScope">
-            AND e.beginDate BETWEEN #{beginDateScope[0]} AND #{beginDateScope[1]}
-        </if>
-
-        ORDER BY e.id
+    select
+    e.*,
+    n.id as nid,
+    n.name as nname,
+    p.id as pid,
+    p.name as pname,
+    d.id as did,
+    d.name as dname,
+    j.id as jid,
+    j.name as jname,
+    pos.id as posid,
+    pos.name as posname
+    from
+    t_employee e,
+    t_nation n,
+    t_politics_status p,
+    t_department d,
+    t_joblevel j,
+    t_position pos
+    where
+    e.nationId = n.id
+    and e.politicId = p.id
+    and e.jobLevelId = j.id
+    and e.departmentId = d.id
+    and e.posId = pos.id
+    <if test="employee.name != null and '' != employee.name ">
+        AND e.name like concat('%',#{employee.name},'%')
+    </if>
+    <if test="employee.politicId != null">
+        AND e.politicId = #{employee.politicId}
+    </if>
+    <if test="employee.nationId != null">
+        AND e.nationId = #{employee.nationId}
+    </if>
+    <if test="employee.jobLevelId != null">
+        AND e.jobLevelId = #{employee.jobLevelId}
+    </if>
+    <if test="employee.posId != null" >
+        AND e.posId = #{employee.posId}
+    </if>
+    <if test="employee.departmentId != null">
+        AND e.departmentId = #{employee.departmentId}
+    </if>
+    <if test="null != employee.engageForm and '' != employee.engageForm">
+        AND e.engageForm = #{employee.engageForm}
+    </if>
+    <if test="null != beginDateScope and 2 == beginDateScope.length">
+        AND e.beginDate between #{beginDateScope[0]} and #{beginDateScope[1]}
+    </if>
+    ORDER BY e.id
     </select>
 
     <select id="getEmployee" resultMap="EmployeeInfo">
