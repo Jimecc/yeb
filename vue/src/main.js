@@ -15,12 +15,13 @@ import {postRequest} from "./utils/api";
 import {getRequest} from "./utils/api";
 import {putRequest} from "./utils/api";
 import {deleteRequest} from "./utils/api";
+import {downloadRequest} from "./utils/download";
 
 Vue.prototype.postRequest = postRequest;
 Vue.prototype.getRequest = getRequest;
 Vue.prototype.putRequest = putRequest;
 Vue.prototype.deleteRequest = deleteRequest;
-
+Vue.prototype.downloadRequest = downloadRequest;
 import {initMenu} from "./utils/menu";
 router.beforeEach((to,from,next)=>{
   if(window.sessionStorage.getItem('tokenStr')){

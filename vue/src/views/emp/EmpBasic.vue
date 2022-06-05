@@ -8,8 +8,18 @@
         <i class="fa fa-angle-double-down" aria-hidden="true"></i>高级搜索</el-button>
     </div>
     <div>
-      <el-button type="success"><i class="fa fa-level-up" aria-hidden="true"></i>导入数据</el-button>
-      <el-button type="success"><i class="fa fa-level-down" aria-hidden="true"></i>导出数据</el-button>
+      <el-upload style="display: inline-flex;margin-right: 10px"
+                 :show-file-list="false"
+                 :before-upload="beforeUpload"
+                 :on-success="onSuccess"
+                 :on-error="onError"
+                 :disabled="importDataDisabled"
+                 :headers="headers"
+                 action="/employee/basic/import">
+        <el-button :disabled="importDataDisabled" type="success" :icon="importDataBtnIcon">{{importDataBtnText}}</el-button>
+      </el-upload>
+      <el-button @click="exportData" type="success" icon="el-icon-download">导出数据</el-button>
+
       <el-button type="primary" icon="el-icon-plus" @click="showAddEmpView">添加员工</el-button>
     </div>
   </div>
@@ -444,6 +454,12 @@ export default {
   name: "EmpBasic",
   data(){
     return{
+      headers:{
+        Authorization:window.sessionStorage.getItem('tokenStr')
+      },
+      importDataDisabled:false,
+      importDataBtnText:'导入数据',
+      importDataBtnIcon:'el-icon-upload2',
       emps:[],
       title:'',
       loading:false,
@@ -530,6 +546,26 @@ export default {
     this.initData();
   },
   methods:{
+    onSuccess(){
+      this.importDataBtnText='导入数据';
+      this.importDataBtnIcon='el-icon-upload2';
+      this.importDataDisabled = false;
+      this.initEmps();
+    },
+    onError(){
+      this.importDataBtnText='导入数据';
+      this.importDataBtnIcon='el-icon-upload2';
+      this.importDataDisabled = false;
+
+    },
+    beforeUpload(){
+      this.importDataBtnIcon='el-icon-loading';
+      this.importDataBtnText='正在上传';
+      this.importDataDisabled = true;
+    },
+    exportData(){
+      this.downloadRequest('/employee/basic/export');
+    },
     showEditEmp(data){
       this.title = '编辑员工信息';
       this.emp = data;
