@@ -2,7 +2,7 @@
 <div>
   <div style="margin-top:10px;display:flex;justify-content: space-between">
     <div>
-      <el-input style="width: 400px;margin-right: 10px" v-model="empName" @clear="initEmps" clearable @keydown.enter.native="initEmps" prefix-icon="el-icon-search" placeholder="请输入员工姓名进行搜索..."></el-input>
+      <el-input style="width: 400px;margin-right: 10px" v-model="empName" @clear="searchEmps" clearable @keydown.enter.native="searchEmps" prefix-icon="el-icon-search" placeholder="请输入员工姓名进行搜索..."></el-input>
       <el-button type="primary" icon="el-icon-search" @click="initEmps">搜索</el-button>
       <el-button type="primary">
         <i class="fa fa-angle-double-down" aria-hidden="true"></i>高级搜索</el-button>
@@ -181,9 +181,9 @@
           label="操作"
           fixed="right">
         <template slot-scope="scope">
-          <el-button style="padding:3px" size="mini">编辑</el-button>
+          <el-button style="padding:3px" size="mini" @click="showEditEmp(scope.row)">编辑</el-button>
           <el-button style="padding:3px" size="mini">查看高级资料</el-button>
-          <el-button style="padding:3px" size="mini" type="danger">删除</el-button>
+          <el-button style="padding:3px" size="mini" type="danger" @click="deleteEmp(scope.row)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -199,7 +199,8 @@
     </div>
   </div>
   <el-dialog
-      title="添加员工"
+      @close="closeDialog"
+      :title="title"
       :visible.sync="dialogVisible"
       width="80%">
     <div>
@@ -431,7 +432,7 @@
     </div>
 
     <span slot="footer" class="dialog-footer">
-    <el-button @click="dialogVisible = false">取 消</el-button>
+    <el-button @click="dialogVisible = false;visible=false;">取 消</el-button>
     <el-button type="primary" @click="doAddEmp">确 定</el-button>
   </span>
   </el-dialog>
@@ -444,6 +445,7 @@ export default {
   data(){
     return{
       emps:[],
+      title:'',
       loading:false,
       total:0,
       page:1,
@@ -463,6 +465,7 @@ export default {
       allDeps:[],
       tiptopDegrees:['博士','硕士','本科','大专','高中','初中','小学','其他'],
       emp:{
+        id:null,
         name: '',
         gender: '',
         birthday: '',
@@ -527,17 +530,61 @@ export default {
     this.initData();
   },
   methods:{
+    showEditEmp(data){
+      this.title = '编辑员工信息';
+      this.emp = data;
+      this.inputDepName = data.department.name;
+      this.initPositions();
+      this.dialogVisible = true;
+      console.log(this.emp);
+
+    },
+    deleteEmp(data){
+      this.$confirm('此操作将永久删除【'+data.name+'】, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.deleteRequest('/employee/basic/'+data.id).then(resp=>{
+          if(resp){
+            this.initEmps();
+          }
+        });
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消删除'
+        });
+      });
+    },
     doAddEmp(){
+      if(this.emp.id){
+        // 更新
+        this.$refs['empForm'].validate(valid=>{
+          if(valid){
+            this.putRequest('/employee/basic/',this.emp).then(resp=>{
+              if(resp){
+                this.dialogVisible = false;
+                this.initEmps();
+              }
+            })
+          }
+        })
+
+      }else{
+        // 添加
       this.$refs['empForm'].validate(valid=>{
         if(valid){
           this.postRequest('/employee/basic/',this.emp).then(resp=>{
             if(resp){
+              this.visible = false;
               this.dialogVisible = false;
               this.initEmps();
             }
           })
         }
       })
+      }
     },
     handleNodeClick(data){
       this.inputDepName = data.name;
@@ -605,6 +652,40 @@ export default {
 
     },
     showAddEmpView(){
+
+      this.title = '添加员工';
+      this.inputDepName = '';
+      this.emp = {
+            id:null,
+            name: '',
+            gender: '',
+            birthday: '',
+            idCard: '',
+            wedlock: '',
+            nationId: null,
+            nativePlace: '',
+            politicId: null,
+            email: '',
+            phone: '',
+            address: '',
+            departmentId: null,
+            jobLevelId: null,
+            posId: null,
+            engageForm: '',
+            tiptopDegree: '',
+            specialty: '',
+            school: '',
+            beginDate: '',
+            workID: '',
+            contractTerm: null,
+            conversionTime: '',
+            notWorkDate: null,
+            beginContract: '',
+            endContract: '',
+            workAge: null,
+            salaryId: null
+      };
+
       this.getMaxWorkID();
       this.initPositions();
       this.dialogVisible = true;
@@ -619,7 +700,7 @@ export default {
     },
     initEmps(){
       this.loading = true;
-      this.getRequest('/employee/basic/?currentPage='+this.page+'&size='+this.size+'&name='+this.empName).then(resp=>{
+      this.getRequest('/employee/basic/?currentPage='+this.page+'&size='+this.size).then(resp=>{
         this.loading=false;
         if(resp){
           this.total = resp.total;
@@ -627,6 +708,20 @@ export default {
 
         }
       })
+    },
+    searchEmps(){
+      this.loading = true;
+      this.getRequest('/employee/basic/?name='+this.empName).then(resp=>{
+        this.loading=false;
+        if(resp){
+          this.total = resp.total;
+          this.emps = resp.data;
+        }
+      })
+    },
+    closeDialog(){
+      this.dialogVisible = false;
+      this.visible = false;
     }
   }
 }
