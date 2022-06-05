@@ -203,7 +203,7 @@
       :visible.sync="dialogVisible"
       width="80%">
     <div>
-      <el-form ref="empForm" :model="emp">
+      <el-form ref="empForm" :model="emp" :rules="rules">
         <el-row :gutter="0">
           <el-col :span="6">
             <el-form-item label="姓名" prop="name">
@@ -269,7 +269,7 @@
           </el-col>
           <el-col :span="7">
             <el-form-item label="联系地址" prop="address">
-              <el-input v-model="emp.assign" placeholder="请输入通讯地址" size="mini" style="width: 200px" prefix-icon="el-icon-edit"></el-input>
+              <el-input v-model="emp.address" placeholder="请输入通讯地址" size="mini" style="width: 200px" prefix-icon="el-icon-edit"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -463,7 +463,6 @@ export default {
       allDeps:[],
       tiptopDegrees:['博士','硕士','本科','大专','高中','初中','小学','其他'],
       emp:{
-        id: 1,
         name: '',
         gender: '',
         birthday: '',
@@ -483,7 +482,6 @@ export default {
         specialty: '',
         school: '',
         beginDate: '',
-        workState: '',
         workID: '',
         contractTerm: null,
         conversionTime: '',
@@ -492,6 +490,35 @@ export default {
         endContract: '',
         workAge: null,
         salaryId: null
+      },
+      rules:{
+        name:[{required:true,message:'请输入员工姓名',trigger:'blur'}],
+        gender:[{required:true,message:'请输入员工性别',trigger:'blur'}],
+        birthday:[{required:true,message:'请输入出生日期',trigger:'blur'}],
+        idCard:[{required:true,message:'请输入身份证号',trigger:'blur'},{pattern:/(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}$)/,message:'身份证号不正确',trigger:'blur'}],
+        wedlock:[{required:true,message:'请输入婚姻状况',trigger:'blur'}],
+        nationId:[{required:true,message:'请输入民族',trigger:'blur'}],
+        nativePlace:[{required:true,message:'请输入籍贯',trigger:'blur'}],
+        politicId:[{required:true,message:'请输入政治面貌',trigger:'blur'}],
+        email:[{required:true,message:'请输入邮箱地址',trigger:'blur'},{type:'email',message:'邮箱地址格式不正确',trigger:'blur'}],
+        phone:[{required:true,message:'请输入联系电话',trigger:'blur'}],
+        address:[{required:true,message:'请输入员工地址',trigger:'blur'}],
+        departmentId:[{required:true,message:'请输入部门名称',trigger:'blur'}],
+        jobLevelID:[{required:true,message:'请输入职称',trigger:'blur'}],
+        posId:[{required:true,message:'请输入职位',trigger:'blur'}],
+        engageForm:[{required:true,message:'请输入聘用形式',trigger:'blur'}],
+        tiptopDegree:[{required:true,message:'请输入学历',trigger:'blur'}],
+        specialty:[{required:true,message:'请输入专业',trigger:'blur'}],
+        school:[{required:true,message:'请输入毕业院校',trigger:'blur'}],
+        beginDate:[{required:true,message:'请输入入职日期',trigger:'blur'}],
+        workState:[{required:true,message:'请输入工作状态',trigger:'blur'}],
+        workID:[{required:true,message:'请输入工号',trigger:'blur'}],
+        contractTerm:[{required:true,message:'请输入合同期限',trigger:'blur'}],
+        conversionTIme:[{required:true,message:'请输入转正日期',trigger:'blur'}],
+        notWorkDate:[{required:true,message:'请输入离职日期',trigger:'blur'}],
+        beginContract:[{required:true,message:'请输入合同起始日期',trigger:'blur'}],
+        endContract:[{required:true,message:'请输入合同结束日期',trigger:'blur'}],
+        workAge:[{required:true,message:'请输入工龄',trigger:'blur'}]
       }
     }
   },
@@ -501,10 +528,14 @@ export default {
   },
   methods:{
     doAddEmp(){
-      this.postRequest('/employee/basic/',this.emp).then(resp=>{
-        if(resp){
-          this.dialogVisible = false;
-          this.initEmps();
+      this.$refs['empForm'].validate(valid=>{
+        if(valid){
+          this.postRequest('/employee/basic/',this.emp).then(resp=>{
+            if(resp){
+              this.dialogVisible = false;
+              this.initEmps();
+            }
+          })
         }
       })
     },

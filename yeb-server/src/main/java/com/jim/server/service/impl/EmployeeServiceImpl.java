@@ -64,12 +64,16 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         return RespBean.success("查询成功",maxWorkID);
     }
 
+
     @Override
     public RespBean addEmp(Employee employee) {
         // 处理合同期限（保留两位小数）
         LocalDate beginContract = employee.getBeginContract();
         LocalDate endContract = employee.getEndContract();
+        System.out.println("111");
         long days = beginContract.until(endContract, ChronoUnit.DAYS);
+        System.out.println("222");
+
         DecimalFormat decimalFormat = new DecimalFormat("##.00");
         employee.setContractTerm(Double.parseDouble(decimalFormat.format(days/365.00)));
         if(1 == employeeMapper.insert(employee)){
