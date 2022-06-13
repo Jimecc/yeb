@@ -174,13 +174,14 @@ export default {
 
 <style>
 .admin-card{
+  margin-left: 8px;
   width: 350px;
   margin-bottom: 20px;
 }
 .admin-container{
   display:flex;
   margin-top: 30px;
-  justify-content: space-around;
+  justify-content: left;
   flex-wrap: wrap;
 }
 .userFaec-img{
