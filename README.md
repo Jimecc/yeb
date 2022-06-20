@@ -6,7 +6,7 @@
 <br><br><br><br>
 ![示例图](https://files.catbox.moe/vme765.png)
 ![邮件示例图](https://files.catbox.moe/t5sjdm.png)
-<font size=2 color=darkgray>以上图片为`/yeb-mail/src/main/resources/template/mail.html`，这只是一个简单的html，可以自行更改</font>
+<font size=2 color=darkgray>以上图片为`/yeb-mail/src/main/resources/template/mail.html`文件，这只是一个简单的html，可以自行更改。</font>
 
 ### 主要技术栈
 #### 后端技术栈
