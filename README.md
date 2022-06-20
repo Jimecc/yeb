@@ -1,7 +1,8 @@
 # 云E办 ( yeb )
 -----
 此项目来自Bilibili，视频地址：https://www.bilibili.com/video/BV1ff4y1M7XK?p=1
-相关博客：[CSDN 博客](https://blog.csdn.net/Hsk_03/article/details/125341293?spm=1001.2014.3001.5501)[个人博客二](http://jime.cc/2022/06/17/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91yeb%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%A0%88for%20CSDN/)
+<br>
+相关博客：[CSDN 博客](https://blog.csdn.net/Hsk_03/article/details/125341293?spm=1001.2014.3001.5501)&nbsp;[个人博客](http://jime.cc/2022/06/17/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91yeb%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%A0%88for%20CSDN/)
 <br><br><br><br>
 ![示例图](https://files.catbox.moe/vme765.png)
 ![邮件示例图](https://files.catbox.moe/t5sjdm.png)
